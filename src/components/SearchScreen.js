@@ -12,7 +12,7 @@ export const SearchScreen = () => {
   
   const {q = ''} = queryString.parse(location.search)
   
-  const [state, setState] = useState();
+  const [state, setState] = useState("");
 
   
   const [formValues, handleInputChange] = useForm({
@@ -27,9 +27,7 @@ export const SearchScreen = () => {
     if (searchText.length > 3) {
       navigate(`?q=${searchText}`)
       const data = await getPokemonByName(q)
-      console.log(data);
       if (data !== null) {
-        console.log('aca');
         setState(data)
       }
     }else {
@@ -41,6 +39,7 @@ export const SearchScreen = () => {
       <form onSubmit={handleSubmitForm}>
         <input className='input-search' type="text"  autoComplete='off' placeholder='Buscar pokemón' name='searchText' value={searchText} onChange={handleInputChange}/>
       </form>
+      <p>Please press enter 2 times</p>
       {
         state && 
         <Card data={state} bigImg={state.sprites.other.dream_world.front_default} img={state.sprites.front_default} experience={state.base_experience} heal={state.stats[0].base_stat} ataque={state.stats[1].base_stat} defensa={state.stats[2].base_stat} specialAttack={state.stats[3].base_stat}/>

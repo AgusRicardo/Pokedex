@@ -3,7 +3,6 @@ body {
   background-image: url('https://wallpapercave.com/wp/wp7733426.png');
   background-position: center center;
   background-size: cover;
-  // height: 100% !important;
   width: 100%;
 }
 .App {
@@ -45,6 +44,9 @@ body {
   margin: 20px;
   .pokedex-card {
     padding: 20px;
+  }
+  .pokedex-card:hover {
+    transform: scale(1.05, 1.05);
   }
 }
 .container-home {
