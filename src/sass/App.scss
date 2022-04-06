@@ -1,0 +1,61 @@
+body {
+  background-attachment: fixed, scroll;
+  background-image: url('https://wallpapercave.com/wp/wp7733426.png');
+  background-position: center center;
+  background-size: cover;
+  // height: 100% !important;
+  width: 100%;
+}
+.App {
+  text-align: center;
+  width: 100%;
+}
+.container-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.card {
+  background-color: #1a203a;
+  padding: 10px;
+  border-radius: 30px;
+  border: 6px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  p {
+    padding: 10px;
+    margin: 3px 15px 3px 15px;
+  }
+}
+
+.pokedex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  .pokedex-card {
+    padding: 20px;
+  }
+}
+.container-home {
+  margin-top: 60px;
+}
+.container-redes {
+  padding: 20px;
+  img {
+    padding: 10px;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
